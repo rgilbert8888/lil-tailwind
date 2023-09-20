@@ -10,4 +10,14 @@ npm install -D tailwindcss postcss autoprefixer
 // generate config files
 npx tailwindcss init -p
 
+// To disable Preflight, add the following to tailwind.config.js
+  corePlugins: {
+    preflight: false
+  }
+
+// Tailwind Play Editor
 https://play.tailwindcss.com/
+
+// Tailwind Play CDN
+<script src="https://cdn.tailwindcss.com"></script>
+<style type="text/tailwindcss"> ... </style>

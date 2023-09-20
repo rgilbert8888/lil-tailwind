@@ -1,17 +1,20 @@
-export default {
-    root: 'src',
-    publicDir: 'public',
-    outDir:'../docs',
-    server: {
-        open:true
+import { defineConfig } from "vite";
+export default defineConfig({
+  root: "src",
+  publicDir: "public",
+  base: "",
+  build: {
+    outDir: "../docs",
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`,
+      },
     },
-    // build: {
-    //     rollupOptions: {
-    //         output: {
-    //             entryFileNames: `assets/[name].js`,
-    //             chunkFileNames: `assets/[name].js`,
-    //             assetFileNames: `assets/[name].[ext]`
-    //         }
-    //     }
-    // }
-}
+  },
+  server: {
+    open: true,
+  },
+});
