@@ -1,0 +1,13 @@
+npm init vite [projectname]
+(yes to install pkg)
+- framework: vanilla
+- variant: vanilla
+
+// enter project and install additional things
+cd [projectname]
+npm install -D tailwindcss postcss autoprefixer
+
+// generate config files
+npx tailwindcss init -p
+
+https://play.tailwindcss.com/
